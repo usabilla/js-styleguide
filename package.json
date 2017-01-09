@@ -1,0 +1,15 @@
+{
+  "name": "js-styleguide",
+  "version": "1.0.0",
+  "description": "Usabilla JavaScript styleguide",
+  "main": "index.js",
+  "repository": "git@github.com:usabilla/js-styleguide.git",
+  "author": "development@usabilla.com",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "lodash": "^4.17.4",
+    "ncp": "^2.0.0",
+    "yargs": "^6.6.0"
+  }
+}
