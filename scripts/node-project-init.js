@@ -5,7 +5,6 @@ const path = require('path');
 const argv = require('yargs').argv;
 const fs = require('fs');
 const ncp = require('ncp').ncp;
-const execSync = require('child_process').execSync;
 require('colors');
 
 const projectDir = argv.projectDir;
@@ -29,29 +28,21 @@ if (!fs.existsSync(projectDir)) {
 console.log('Bootstrapping project');
 ncp('./node-project-template', projectDir, {cobbler: true, stopOnErr: true}, (err) => {
   assert.ifError(err);
-  execSync(`cd ${projectDir}`);
   console.log('Yarn Installing');
-  yarnInstall((err) => {
-    if (err) { process.exit(1); }
-    console.log('Done');
-  });
+  yarnInstall(projectDir, () => console.log('Done.'.cyan));
 });
 
-function yarnInstall(cb) {
-  const spawn = require('child_process').spawn;
-  const yarn = spawn('yarn install');
-  let err = null;
 
-  yarn.stdout.on('data', (data) => {
-    console.log(`stdout: ${data}`);
-  });
+function yarnInstall(dir, cb) {
+  const exec = require('child_process').exec;
+  const cmd = `cd ${dir} && yarn install`;
 
-  yarn.stderr.on('data', (data) => {
-    err = true;
-    console.log(`stderr: ${data}`.red);
-  });
-
-  yarn.on('close', () => {
-    cb(err);
+  exec(cmd, function(error, stdout, stderr) {
+    if (error) {
+      console.log(`Yarn Error: ${stderr}`.red);
+      process.exit(1);
+    }
+    console.log(stdout);
+    cb();
   });
 }
