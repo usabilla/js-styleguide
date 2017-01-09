@@ -1,5 +1,5 @@
 {
-  "name": "YOUR PROJECT NAME",
+  "name": "YOUR-PROJECT-NAME",
   "version": "1.0.0",
   "private": true,
   "description": "",
@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "eslint": "^3.12.1",
-    "eslint-config-ub": "github????",
+    "eslint-config-ub": "git://github.com/usabilla/js-styleguide",
     "jasmine": "^2.5.2",
     "lodash": "^4.12.0",
     "watch": "^1.0.1"

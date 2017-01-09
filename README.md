@@ -1,4 +1,4 @@
-# js-stylguide
+# js-styleguide
 
 ## Eslint Config
 Install package:
