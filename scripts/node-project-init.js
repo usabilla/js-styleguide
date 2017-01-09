@@ -22,6 +22,11 @@ if (!fs.existsSync(projectDir)) {
   return exitError(`Project directory ${projectDir} does not exist`);
 }
 
+
+if (fs.existsSync(path.join(projectDir, '/package.json'))) {
+  return exitError(`Project package.json already exists`);
+}
+
 console.log(`Copying files to ${projectDir}:`.cyan);
 const templateDir = path.resolve('./node-project-template');
 ncp(templateDir, projectDir, {cobbler: true, stopOnErr: true, filter: filterNodeModules}, (err) => {
