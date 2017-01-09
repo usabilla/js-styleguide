@@ -5,7 +5,7 @@ module.exports = function () {
     testFramework: 'jasmine',
     env: {
       type: 'node',
-      runner: '/Users/piet/.nvm/versions/node/v7.2.1/bin/node'
+      // runner: 'path/to/your/node/executable'
     }
   };
 };
