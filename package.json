@@ -6,6 +6,9 @@
   "repository": "git@github.com:usabilla/js-styleguide.git",
   "author": "development@usabilla.com",
   "license": "MIT",
+  "scripts": {
+    "test": "node scripts/node-project-init.test.js"
+  },
   "dependencies": {
     "colors": "^1.1.2",
     "lodash": "^4.17.4",

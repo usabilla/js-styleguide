@@ -41,7 +41,7 @@ ncp(templateDir, projectDir, {cobbler: true, stopOnErr: true, filter: filterNode
 });
 
 function exitError(msg) {
-  console.log((msg || '').red);
+  console.error((msg || '').red);
   process.exit(1);
 }
 
