@@ -8,13 +8,14 @@ notify:
 
 dependencies:
   pre:
-    - ./scripts/install-yarn.sh
+    - curl -o- -L https://raw.githubusercontent.com/usabilla/js-styleguide/master/scripts/yarn-install.sh | bash;
   cache_directories:
     - ~/.yarn
-    - ~/.yarn-cache
+    - ~/.cache/yarn
   override:
     - yarn install
 
 test:
   override:
     - yarn test
+    - yarn lint
