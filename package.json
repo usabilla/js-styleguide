@@ -1,6 +1,6 @@
 {
   "name": "@usabilla/js-styleguide",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Usabilla JavaScript styleguide",
   "main": "index.js",
   "repository": "git@github.com:usabilla/js-styleguide.git",
@@ -8,8 +8,16 @@
   "license": "MIT",
   "dependencies": {
     "colors": "^1.1.2",
+    "condition-circle": "^1.5.0",
     "lodash": "^4.17.4",
     "ncp": "^2.0.0",
+    "semantic-release": "^6.3.2",
     "yargs": "^6.6.0"
+  },
+  "scripts": {
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "release": {
+    "verifyConditions": "condition-circle"
   }
 }
