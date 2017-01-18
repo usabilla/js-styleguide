@@ -1,5 +1,5 @@
 {
-  "name": "js-styleguide",
+  "name": "@usabilla/js-styleguide",
   "version": "1.0.0",
   "description": "Usabilla JavaScript styleguide",
   "main": "index.js",
