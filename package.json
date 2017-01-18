@@ -7,15 +7,19 @@
   "author": "development@usabilla.com",
   "license": "MIT",
   "dependencies": {
+    "@usabilla/js-styleguide": "^1.0.0",
     "colors": "^1.1.2",
     "condition-circle": "^1.5.0",
+    "eslint": "^3.13.1",
     "lodash": "^4.17.4",
     "ncp": "^2.0.0",
     "semantic-release": "^6.3.2",
     "yargs": "^6.6.0"
   },
   "scripts": {
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "release": {
     "verifyConditions": "condition-circle"
