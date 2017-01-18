@@ -1,3 +1,4 @@
 {
-  "extends": "./node_modules/js-styleguide/eslint-config-usabilla/index.js"
+  // TODO: Uncomment this before commiting your new project
+  //"extends": "./node_modules/@usabilla/js-styleguide/eslint-config-usabilla/index.js"
 }

@@ -1,4 +1,5 @@
 #!/bin/node
+/* eslint no-console: 0 */
 const _ = require('lodash');
 const assert = require('assert');
 const path = require('path');
@@ -24,7 +25,7 @@ if (!fs.existsSync(projectDir)) {
 
 
 if (fs.existsSync(path.join(projectDir, '/package.json'))) {
-  return exitError(`Project package.json already exists`);
+  return exitError('Project package.json already exists');
 }
 
 console.log(`Copying files to ${projectDir}:`.cyan);
@@ -34,10 +35,11 @@ ncp(templateDir, projectDir, {cobbler: true, stopOnErr: true, filter: filterNode
   console.log('Done.'.green);
   console.log('Next:');
   console.log(`- cd to ${projectDir}`);
-  console.log(`- nvm use (or your preferred nvm alternative)`);
-  console.log(`- yarn install`);
-  console.log(`- update package.json and README.md with your project details`);
-  console.log(`- enjoy!`);
+  console.log('- nvm use (or your preferred nvm alternative)');
+  console.log('- yarn install');
+  console.log('- update package.json and README.md with your project details');
+  console.log('- uncomment .eslint.json config');
+  console.log('- enjoy!');
 });
 
 function exitError(msg) {
