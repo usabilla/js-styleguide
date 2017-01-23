@@ -7,10 +7,7 @@ notify:
     - url: https://public.intranet.usabilla.nl/wall-e/incoming/circleci-build-webhook
 
 dependencies:
-  pre:
-    - ./scripts/yarn-install.sh;
   cache_directories:
-    - ~/.yarn
     - ~/.cache/yarn
   override:
     - yarn install
