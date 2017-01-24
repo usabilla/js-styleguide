@@ -8,6 +8,7 @@ module.exports = {
     'es6': true
   },
   'rules': {
+    'arrow-parens': ['error', 'always'],
     'quotes': ['error', 'single'],
     'indent': ['error', 2, {'SwitchCase': 1}],
     'space-before-function-paren': ['error', 'never']
