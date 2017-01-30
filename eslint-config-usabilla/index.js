@@ -13,5 +13,6 @@ module.exports = {
     'indent': ['error', 2, {'SwitchCase': 1}],
     'space-before-function-paren': ['error', 'never'],
     'comma-dangle': ['error', 'always-multiline'],
+    'eol-last': ['error', 'always'],
   },
 };
