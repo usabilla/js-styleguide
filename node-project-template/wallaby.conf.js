@@ -9,6 +9,6 @@ module.exports = function() {
     env: {
       type: 'node',
       // runner: 'path/to/your/node/executable'
-    }
+    },
   };
 };
