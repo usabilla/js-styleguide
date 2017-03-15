@@ -30,3 +30,7 @@ Run project init:
 ```
 node scripts/node-project-init.js --projectDir <../relative/path/to/project/dir>
 ```
+
+## Idea Code Style
+
+To use the idea code style go to `Preferences -> Editor -> Code Style` and import the `usabilla-idea-js-code-style.xml` template. Select it and click apply.
