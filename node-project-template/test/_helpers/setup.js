@@ -2,7 +2,7 @@ const SpecReporter = require('jasmine-spec-reporter').SpecReporter;
 const matchers = require('./matchers');
 
 // Custom reporter
-if (!global.wallaby) {
+if (process.env.TEST_VERBOSE || process.env.CI) {
   jasmine.getEnv().clearReporters();
   jasmine.getEnv().addReporter(new SpecReporter({
     spec: {
