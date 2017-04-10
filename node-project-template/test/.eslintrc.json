@@ -1,8 +1,11 @@
 {
+  "plugins": ["jasmine"],
+  "extends": "plugin:jasmine/recommended",
   "env": {
     "jasmine": true
   },
   "rules": {
-    "no-console": 0
+    "no-console": 0,
+    "jasmine/no-global-setup": 0
   }
 }
