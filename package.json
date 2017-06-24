@@ -10,7 +10,7 @@
     "@usabilla/js-styleguide": "^1.0.0",
     "colors": "^1.1.2",
     "condition-circle": "^1.5.0",
-    "eslint": "^3.13.1",
+    "eslint": "^4.1.0",
     "lodash": "^4.17.4",
     "ncp": "^2.0.0",
     "semantic-release": "^6.3.2",
