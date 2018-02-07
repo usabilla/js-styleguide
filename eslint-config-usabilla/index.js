@@ -14,5 +14,6 @@ module.exports = {
     'space-before-function-paren': ['error', 'never'],
     'comma-dangle': ['error', 'always-multiline'],
     'eol-last': ['error', 'always'],
+    'no-unused-vars': ['error', { 'ignoreRestSiblings': true }],
   },
 };
